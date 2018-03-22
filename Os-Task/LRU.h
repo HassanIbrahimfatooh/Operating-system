@@ -4,9 +4,8 @@
 using namespace std;
 
 // LRU function
-void LRU(int arr[] , int ArraySize)
-{
-    cout << "Hey there";
+void LRU(int arr[] , int ArraySize){
+    // Your code goes here
 }
 
 #endif // LRU_H_INCLUDED

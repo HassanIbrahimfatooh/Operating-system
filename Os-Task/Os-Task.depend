@@ -1,9 +1,24 @@
 # depslib dependency file v1.0
-1521758272 source:c:\users\ihass\documents\github\os-task\os-task\main.cpp
+1521760075 source:c:\users\ihass\documents\github\os-task\os-task\main.cpp
 	<iostream>
 	<time.h>
 	<stdlib.h>
 	"FIFO.h"
+	"LFU.h"
+	"LRU.h"
+	"MFU.h"
+	"Optimum.h"
+	"SecondChance.h"
 
-1521758307 c:\users\ihass\documents\github\os-task\os-task\fifo.h
+1521758366 c:\users\ihass\documents\github\os-task\os-task\fifo.h
+
+1521758633 c:\users\ihass\documents\github\os-task\os-task\lfu.h
+
+1521758755 c:\users\ihass\documents\github\os-task\os-task\lru.h
+
+1521758561 c:\users\ihass\documents\github\os-task\os-task\mfu.h
+
+1521758605 c:\users\ihass\documents\github\os-task\os-task\optimum.h
+
+1521758596 c:\users\ihass\documents\github\os-task\os-task\secondchance.h
 

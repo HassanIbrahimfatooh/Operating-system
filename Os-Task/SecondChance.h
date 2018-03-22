@@ -2,9 +2,8 @@
 #define SECONDCHANCE_H_INCLUDED
 
 // SecondChance function
-void SecondChance(int arr[] , int ArraySize)
-{
-
+void SecondChance(int arr[] , int ArraySize){
+    // Your code goes here
 }
 
 

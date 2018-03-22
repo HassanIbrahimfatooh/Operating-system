@@ -3,9 +3,8 @@
 using namespace std;
 
 // MFU function
-void MFU(int arr[] , int ArraySize)
-{
-
+void MFU(int arr[] , int ArraySize){
+    // Your code goes here
 }
 
 
