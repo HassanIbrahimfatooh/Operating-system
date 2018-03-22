@@ -5,7 +5,7 @@ using namespace std;
 
 // LRU function
 void LRU(int arr[] , int ArraySize){
-    // Your code goes here
+    // Complete this function
 }
 
 #endif // LRU_H_INCLUDED

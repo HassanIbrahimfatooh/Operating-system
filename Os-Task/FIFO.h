@@ -5,7 +5,7 @@ using namespace std;
 
 // FIFO function
 void FIFO(int arr[] , int ArraySize){
-    // Your code goes here
+    // Complete this function
 }
 
 #endif // FIFO_H_INCLUDED
