@@ -52,21 +52,27 @@ int main()
 
     // Checking the input for executing the certain function
     if (MemoryType == 1){
+        /* Headers/FIFO.h */
         FIFO(arr , ArraySize);
     }
     else if (MemoryType == 2){
+        /* Headers/LRU.h */
         LRU(arr , ArraySize);
     }
     else if (MemoryType == 3){
+        /* Headers/LFU.h */
         LFU(arr , ArraySize);
     }
     else if (MemoryType == 4){
+        /* Headers/MFU.h */
         MFU(arr , ArraySize);
     }
     else if (MemoryType == 5){
+        /* Headers/Optimum.h */
         Optimum(arr , ArraySize);
     }
     else if (MemoryType == 6){
+        /* Headers/SecondChance.h */
         SecondChance(arr , ArraySize);
     }
 
