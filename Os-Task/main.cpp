@@ -48,6 +48,7 @@ int main()
 
     // Taking an input
     cin >> MemoryType;
+    system("CLS");      /* Clearing the output screen */
 
     // Checking the input for executing the certain function
     if (MemoryType == 1){
