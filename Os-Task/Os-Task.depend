@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1521758272 source:c:\users\ihass\documents\github\os-task\os-task\main.cpp
+	<iostream>
+	<time.h>
+	<stdlib.h>
+	"FIFO.h"
+
+1521758307 c:\users\ihass\documents\github\os-task\os-task\fifo.h
+
