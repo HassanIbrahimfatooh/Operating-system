@@ -32,6 +32,14 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="FIFO.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="LFU.h" />
+		<Unit filename="LRU.h" />
+		<Unit filename="MFU.h" />
+		<Unit filename="Optimum.h" />
+		<Unit filename="SecondChance.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
