@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1521769186 source:c:\users\ihass\documents\github\os-task\os-task\main.cpp
+1521769386 source:c:\users\ihass\documents\github\os-task\os-task\main.cpp
 	<iostream>
 	<time.h>
 	<stdlib.h>
@@ -10,7 +10,7 @@
 	"Optimum.h"
 	"SecondChance.h"
 
-1521769214 c:\users\ihass\documents\github\os-task\os-task\fifo.h
+1521769231 c:\users\ihass\documents\github\os-task\os-task\fifo.h
 
 1521760424 c:\users\ihass\documents\github\os-task\os-task\lfu.h
 
