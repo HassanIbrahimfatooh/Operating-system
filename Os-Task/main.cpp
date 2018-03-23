@@ -44,7 +44,7 @@ int main()
     cout << "4- Most Frequently used(MFU)"<<endl;
     cout << "5- Optimum "<<endl;
     cout << "6- Second Chance"<<endl<<endl;
-    cout << "Choose a Sequence :  ";
+    cout << "Choose a Number :  ";
 
     // Taking an input
     cin >> MemoryType;
@@ -74,6 +74,8 @@ int main()
     else if (MemoryType == 6){
         /* Headers/SecondChance.h */
         SecondChance(arr , ArraySize);
+    }else{
+        cout << "Please Choose a valid Number"<<endl;
     }
 
     return 0;
