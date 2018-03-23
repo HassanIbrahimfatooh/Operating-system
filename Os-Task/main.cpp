@@ -44,7 +44,7 @@ int main()
     cout << "4- Most Frequently used(MFU)"<<endl;
     cout << "5- Optimum "<<endl;
     cout << "6- Second Chance"<<endl<<endl;
-    cout << "Choose a Number :  ";
+    cout << "Choose a Sequence :  ";
 
     // Taking an input
     cin >> MemoryType;
