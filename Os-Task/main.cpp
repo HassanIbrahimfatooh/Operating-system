@@ -5,7 +5,7 @@
 #include "LFU.h"         /* Headers/LFU.h */
 #include "LRU.h"         /* Headers/LRU.h */
 #include "MFU.h"         /* Headers/MFU.h */
-#include "Optimum.h"     /* Headers/Optimum.h */
+#include "Optimal.h"     /* Headers/Optimal.h */
 #include "SecondChance.h"    /* Headers/SecondChance.h */
 
 using namespace std;
@@ -46,7 +46,7 @@ int main()
     cout << "2- Least Recently used(LRU)"<<endl;
     cout << "3- Least Frequently used(LFU)"<<endl;
     cout << "4- Most Frequently used(MFU)"<<endl;
-    cout << "5- Optimum "<<endl;
+    cout << "5- Optimal "<<endl;
     cout << "6- Second Chance"<<endl<<endl;
     cout << "Choose a Number :  ";
 
@@ -72,8 +72,8 @@ int main()
         MFU(Pages , NPages, NFrames);
     }
     else if (Algorithm == 5){
-        /* Headers/Optimum.h */
-        Optimum(Pages , NPages, NFrames);
+        /* Headers/Optimal.h */
+        Optimal(Pages , NPages, NFrames);
     }
     else if (Algorithm == 6){
         /* Headers/SecondChance.h */
