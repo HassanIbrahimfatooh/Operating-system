@@ -18,11 +18,11 @@ int main()
     srand (time(NULL));
 
     // Variables
-    int NPages;   /* Set The Number Of Pages */
-    int Algorithm;  /* Chooses memory management type*/
-    int NFrames;    /* Set The Number Of Frames */
+    int NPages;   /* TO Set The Number Of Pages */
+    int Algorithm;  /* To Chooses memory management algorithm*/
+    int NFrames;    /* To Set The Number Of Frames */
 
-    // Taking memory size variable
+    // Taking The Numbers Of Pages and Frames
     cout << "Enter The Number of Pages :  ";
     cin >> NPages ;
     cout << "Enter The Number of Frames :  ";
@@ -35,7 +35,7 @@ int main()
 
     // Pushing Random Numbers into the array from (1) to (10)
     cout << "Array : "<<endl;
-    for (int i=0 ; i<NPages ;i++){
+    for (int i=0 ; i < NPages ;i++){
         Pages[i] = rand() % 10 + 1;
         cout << Pages[i]<<"   ";
     }
