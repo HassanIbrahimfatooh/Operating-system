@@ -1,10 +1,10 @@
-#ifndef OPTIMUM_H_INCLUDED
-#define OPTIMUM_H_INCLUDED
+#ifndef OPTIMAL_H_INCLUDED
+#define OPTIMAL_H_INCLUDED
 
 using namespace std;
 
-// Optimum function
-void Optimum(int Pages[], int NPages, int  NFrames){
+// Optimal function
+void Optimal(int Pages[], int NPages, int  NFrames){
    
     // Frames Array
     int *Frames;
@@ -95,4 +95,4 @@ void Optimum(int Pages[], int NPages, int  NFrames){
     cout<<"Total Miss = "<<TotalMiss<<endl;
 }
 
-#endif // OPTIMUM_H_INCLUDED
+#endif // OPTIMAL_H_INCLUDED
