@@ -17,7 +17,7 @@ int min(int counter[],int nFrames)
 
 
 // LRU function
-void LRU(int Pages[], int NPages, int  NFrames){
+void LRU(int arr[], int ArraySize, int  NFrames){
     // Complete this function
     int Frames[NFrames]; /* The Array Of Frames That We have */
 
