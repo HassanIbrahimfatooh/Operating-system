@@ -10,64 +10,88 @@ void Optimum(int Pages[], int NPages, int  NFrames){
     int *Frames;
     Frames = new int [NFrames];
     for(int i=0; i< NFrames; i++)
-        Frames[i] = -1;
+        Frames[i] = -1; // Empty Frame
     
-    for(int i=0; i< NPages; i++)
+    int TotalMiss = 0; // Total Miss Counter
+    
+    // Loop on Pages
+    for(int i=0; i<NPages; i++)
     {
-        bool isFrameEmpty = false;
-        bool isPageAlreadyPresent = false;
-        for(int j=0; j< NFrames; j++)
+        bool isThereEmptyFrame = false;
+        bool isPageAlreadyPresented = false;
+        
+        // Loop on Frames
+        for(int j=0; j<NFrames; j++)
         {
+            
             // Check if the Page is aleardy presented
             if(Frames[j] == Pages[i])
             {
-                isPageAlreadyPresent = true;
+                isPageAlreadyPresented = true;
                 break;
             }
+            
             // Check if there is Empty Frame
             else if(Frames[j] == -1)
             {
+                TotalMiss++;
                 Frames[j] = Pages[i];
-                isFrameEmpty = true;
+                isThereEmptyFrame = true;
                 break;
             }
-        } //Loop on Frames
+        } // End of Loop on Frames
         
-        if((!isFrameEmpty) && (!isPageAlreadyPresent))
+        // Need to Replace
+        if((!isThereEmptyFrame) && (!isPageAlreadyPresented))
         {
-            int MaxCount = 0;
+            TotalMiss++;
+            int MaxDistance = 0;
             int Index = -1;
+            
+            // Loop on Frames
             for(int j=0; j< NFrames; j++)
             {
-                bool found = false;
+                bool isPageUsedInFuture = false;
+                
+                // Loop on Future use Pages
                 for(int k=i+1; k<NPages; k++)
+                {
+                    // is Page Used In Future
                     if(Frames[j] == Pages[k])
                     {
-                        found = true;
-                        if((k - i) > MaxCount)
+                        isPageUsedInFuture = true;
+                        
+                        if((k - i) > MaxDistance)
                         {
-                            MaxCount = k - i;
+                            MaxDistance = k - i;
                             Index = j;
                         }
                         break;
                     }
-                if(!found)
+                } // End Loop on Future use Pages
+                
+                if(!isPageUsedInFuture)
                 {
-                    MaxCount = NPages;
+                    MaxDistance = NPages; // The Biggest Value forever
                     Index = j;
                 }
-            }
+            } // End of Loop on Frames
+            
+            // Replace The Frame's Page 
             Frames[Index] = Pages[i];
         }
         
+        // Show Frames 
         for(int j=0;j<NFrames;j++)
         {
             cout<<Frames[j]<<" ";
         }
-         
-    cout<<endl;  
+        cout<<endl;  
         
-    }
+    } // End of Loop on Pages
+    
+    // Show Tota Miss
+    cout<<"Total Miss = "<<TotalMiss<<endl;
 }
 
 #endif // OPTIMUM_H_INCLUDED
