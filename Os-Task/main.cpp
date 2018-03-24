@@ -69,7 +69,7 @@ int main()
     }
     else if (Algorithm == 4){
         /* Headers/MFU.h */
-        MFU(arr , NPages, NFrames);
+        MFU(Pages , NPages, NFrames);
     }
     else if (Algorithm == 5){
         /* Headers/Optimum.h */
