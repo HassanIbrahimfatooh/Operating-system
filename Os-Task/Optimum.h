@@ -14,46 +14,55 @@ void Optimum(int Pages[], int NPages, int  NFrames){
     
     for(int i=0; i< NPages; i++)
     {
-        bool isFrameEmpty = False;
-        bool isPageAlreadyPresent = False;
+        bool isFrameEmpty = false;
+        bool isPageAlreadyPresent = false;
         for(int j=0; j< NFrames; j++)
         {
             // Check if the Page is aleardy presented
             if(Frames[j] == Pages[i])
             {
-                isPageAlreadyPresent = True;
+                isPageAlreadyPresent = true;
                 break;
             }
             // Check if there is Empty Frame
             else if(Frames[j] == -1)
             {
                 Frames[j] = Pages[i];
-                isFrameEmpty = True;
+                isFrameEmpty = true;
                 break;
             }
         } //Loop on Frames
-        if(!isFrameEmpty && !isPageAlreadyPresent)
+        
+        if((!isFrameEmpty) && (!isPageAlreadyPresent))
         {
-            int minCount = -1;
-            int minIndex = -1;
+            int MaxCount = 0;
+            int Index = -1;
             for(int j=0; j< NFrames; j++)
             {
-                int counter = 0;
+                bool found = false;
                 for(int k=i+1; k<NPages; k++)
                     if(Frames[j] == Pages[k])
-                        counter++;
-                if(counter < minCount)
+                    {
+                        found = true;
+                        if((k - i) > MaxCount)
+                        {
+                            MaxCount = k - i;
+                            Index = j;
+                        }
+                        break;
+                    }
+                if(!found)
                 {
-                    minCount = counter;
-                    minIndex = j;
+                    MaxCount = NPages;
+                    Index = j;
                 }
             }
-            Frames[minIndex] = Page[i];
+            Frames[Index] = Pages[i];
         }
         
-        for(j=0;j<nFrames;j++)
+        for(int j=0;j<NFrames;j++)
         {
-            cout<<frames[j]<<" ";
+            cout<<Frames[j]<<" ";
         }
          
     cout<<endl;  
