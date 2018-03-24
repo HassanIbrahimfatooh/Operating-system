@@ -4,7 +4,7 @@
 using namespace std;
 
 // LFU function
-void LFU(int arr[] , int ArraySize, int NFrames){
+void LFU(int Pages[], int NPages, int  NFrames){
     // Complete this function
 }
 
