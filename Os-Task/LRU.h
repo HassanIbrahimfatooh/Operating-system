@@ -4,7 +4,7 @@
 using namespace std;
 
 // LRU function
-void LRU(int arr[] , int ArraySize){
+void LRU(int arr[] , int ArraySize , int NFrames){
     // Complete this function
 }
 
