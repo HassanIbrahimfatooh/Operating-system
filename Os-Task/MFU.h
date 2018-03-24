@@ -4,7 +4,7 @@
 using namespace std;
 
 // MFU function
-void MFU(int arr[] , int ArraySize, int NFrames){
+void MFU(int Pages[], int NPages, int  NFrames){
     // Complete this function
 }
 
