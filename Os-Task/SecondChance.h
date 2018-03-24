@@ -4,7 +4,7 @@
 using namespace std;
 
 // SecondChance function
-void SecondChance(int arr[] , int ArraySize){
+void SecondChance(int Pages[], int NPages, int  NFrames){
     // Complete this function
 }
 

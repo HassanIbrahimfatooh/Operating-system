@@ -4,7 +4,7 @@
 using namespace std;
 
 // FIFO function
-void FIFO(int arr[] , int ArraySize){
+void FIFO(int Pages[], int NPages, int  NFrames){
     // Complete this function
 }
 

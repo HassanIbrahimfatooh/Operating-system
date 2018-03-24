@@ -5,7 +5,7 @@
 #include "LFU.h"         /* Headers/LFU.h */
 #include "LRU.h"         /* Headers/LRU.h */
 #include "MFU.h"         /* Headers/MFU.h */
-#include "Optimum.h"     /* Headers/Optimum.h */
+#include "Optimal.h"     /* Headers/Optimal.h */
 #include "SecondChance.h"    /* Headers/SecondChance.h */
 
 using namespace std;
@@ -18,22 +18,26 @@ int main()
     srand (time(NULL));
 
     // Variables
-    int ArraySize;   /* Describes Memory size */
-    int MemoryType;  /* Chooses memory management type*/
+    int NPages;   /* TO Set The Number Of Pages */
+    int Algorithm;  /* To Chooses memory management algorithm*/
+    int NFrames;    /* To Set The Number Of Frames */
 
-    // Taking memory size variable
-    cout << "Choose Memory Size :  ";
-    cin >> ArraySize ;
+    // Taking The Numbers Of Pages and Frames
+    cout << "Enter The Number of Pages :  ";
+    cin >> NPages ;
+    cout << "Enter The Number of Frames :  ";
+    cin >> NFrames ;
     system("CLS");      /* Clearing the output screen */
 
-    // Array has the same size
-    int arr[ArraySize];
+    // Pages Array
+    int *Pages;
+    Pages = new int [NPages];
 
     // Pushing Random Numbers into the array from (1) to (10)
     cout << "Array : "<<endl;
-    for (int i=0 ; i<ArraySize ;i++){
-        arr[i] = rand() % 10 + 1;
-        cout << arr[i]<<"   ";
+    for (int i=0 ; i < NPages ;i++){
+        Pages[i] = rand() % 10 + 1;
+        cout << Pages[i]<<"   ";
     }
 
     // For Choosing a Number
@@ -42,41 +46,40 @@ int main()
     cout << "2- Least Recently used(LRU)"<<endl;
     cout << "3- Least Frequently used(LFU)"<<endl;
     cout << "4- Most Frequently used(MFU)"<<endl;
-    cout << "5- Optimum "<<endl;
+    cout << "5- Optimal "<<endl;
     cout << "6- Second Chance"<<endl<<endl;
     cout << "Choose a Number :  ";
 
     // Taking an input
-    cin >> MemoryType;
+    cin >> Algorithm;
     system("CLS");      /* Clearing the output screen */
 
     // Checking the input for executing the certain function
-    if (MemoryType == 1){
+    if (Algorithm == 1){
         /* Headers/FIFO.h */
-        FIFO(arr , ArraySize);
+        FIFO(Pages , NPages, NFrames);
     }
-    else if (MemoryType == 2){
+    else if (Algorithm == 2){
         /* Headers/LRU.h */
-        LRU(arr , ArraySize);
+        LRU(Pages , NPages, NFrames);
     }
-    else if (MemoryType == 3){
+    else if (Algorithm == 3){
         /* Headers/LFU.h */
-        LFU(arr , ArraySize);
+        LFU(Pages , NPages, NFrames);
     }
-    else if (MemoryType == 4){
+    else if (Algorithm == 4){
         /* Headers/MFU.h */
-        MFU(arr , ArraySize);
+        MFU(Pages , NPages, NFrames);
     }
-    else if (MemoryType == 5){
-        /* Headers/Optimum.h */
-        Optimum(arr , ArraySize);
+    else if (Algorithm == 5){
+        /* Headers/Optimal.h */
+        Optimal(Pages , NPages, NFrames);
     }
-    else if (MemoryType == 6){
+    else if (Algorithm == 6){
         /* Headers/SecondChance.h */
-        SecondChance(arr , ArraySize);
+        SecondChance(Pages, NPages, NFrames);
     }else{
         cout << "Please Choose a valid Number"<<endl;
     }
-
     return 0;
 }
