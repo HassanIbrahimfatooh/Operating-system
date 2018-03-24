@@ -74,6 +74,7 @@ void Optimum(int Pages[], int NPages, int  NFrames){
                 {
                     MaxDistance = NPages; // The Biggest Value forever
                     Index = j;
+                    break;
                 }
             } // End of Loop on Frames
             
