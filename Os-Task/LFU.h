@@ -12,7 +12,7 @@ void LFU(int arr[] , int nPages , int nFrames){
     int counter=1 ; /* for check who come first */
     int totalMiss = 0;
     int *frames = new int [nFrames] ;    /* array for frames */
-    int *frequency = new int [nPages];  /* array to check frequency for each page */
+    int frequency [10];  /* array to check frequency for each page */
     int *check = new int [nPages];      /* array to be checked if page leave memory or not */
     
     
