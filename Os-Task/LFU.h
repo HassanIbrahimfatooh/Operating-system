@@ -8,18 +8,15 @@ void LFU(int arr[] , int nPages , int nFrames){
 
 
     int p;
-    int counter=1 ; /* for check who come first */
-
-
-    int totalMiss = 0;
-
-    int *frames = new int [nFrames] ;    /* array for frames */
-
-    int *frequency = new int [nPages];  /* array to check frequency for each page */
-
-    /* array to be checked if page leave memory or not */
-    int *check = new int [nPages];
     bool done;
+    int counter=1 ; /* for check who come first */
+    int totalMiss = 0;
+    int *frames = new int [nFrames] ;    /* array for frames */
+    int *frequency = new int [nPages];  /* array to check frequency for each page */
+    int *check = new int [nPages];      /* array to be checked if page leave memory or not */
+    
+    
+    
     //initialize frames as empty
     for (int i=0; i<nFrames; i++)
         frames[i]= -1;
@@ -29,8 +26,6 @@ void LFU(int arr[] , int nPages , int nFrames){
     // initialize check bit for each page
     for (int i=0; i<nPages; i++ )
         check[i]= -1;
-
-
 
 
     for (int readyPage=0;readyPage<nPages; readyPage++){
@@ -106,13 +101,10 @@ void LFU(int arr[] , int nPages , int nFrames){
                 for (int qq = 0 ; qq<nFrames;qq++)
                 cout<< frames[qq]<<" ";
                 cout<< "\n";
-            }
-    }
+            }  // end of if statment
+    } // end of for loop 
 
-
-
-
-        }
+} // end of function 
 
 
 
