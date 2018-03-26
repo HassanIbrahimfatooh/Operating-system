@@ -4,9 +4,9 @@
 using namespace std;
 
 // SecondChance function
-void SecondChance(int P[],int  NPages,int NFrames)
+void SecondChance(int Pages[],int  NPages,int NFrames)
 {
-    int Pages[18] = {0,4,1,4,2,4,3,4,2,4,0,4,1,4,2,4,3,4};
+
     int *frames = new int [NFrames] ;    /* array for frames */
     bool *secondChanceBit = new bool[NFrames] ;  /*SECOND CHANCE Bit */
     bool valid[10];
@@ -36,11 +36,9 @@ void SecondChance(int P[],int  NPages,int NFrames)
                 secondChanceBit[frame] = false;
                 cout<<"you are at frame "<< frame;
                 frame = (frame+1)%NFrames;
-
             }
             else if (valid[Pages[readyPage]-1] == true)
             {
-
                 cout<<"second condition";
 
                 cout<<"you are at frame "<< frame;
@@ -49,6 +47,14 @@ void SecondChance(int P[],int  NPages,int NFrames)
                     if (Pages[readyPage]==frames[i])
                         secondChanceBit[i]=true;
                 }
+            }
+              else if (secondChanceBit[frame]== true)
+            {
+                cout<<"third condition" <<"\n";
+                cout<<"you are at frame "<< frame;
+                secondChanceBit[frame] = false;
+                frame = (frame+1)%NFrames;
+
             }
             else if (secondChanceBit[frame]== false)
             {
@@ -60,23 +66,7 @@ void SecondChance(int P[],int  NPages,int NFrames)
                 frame = (frame+1)%NFrames;
                 valid[Pages[readyPage]-1] = true;
                 totalMiss++;
-
-
-
-
             }
-            else if (secondChanceBit[frame]== true)
-            {
-                cout<<"third condition" <<"\n";
-                cout<<"you are at frame "<< frame;
-                secondChanceBit[frame] = false;
-                frame = (frame+1)%NFrames;
-
-
-
-            }
-
-
 
         }
         while (valid[Pages[readyPage]-1] == false);
