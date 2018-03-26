@@ -14,13 +14,19 @@ using namespace std;
 // Main function
 int main()
 {
+    // Entering seed number
+    int seednumber;
+    cout << "Enter seed number: "  ;
+    cin >> seednumber;
+
     // Function to change time for Random function
-    srand (time(NULL));
+    srand (seednumber);
 
     // Variables
     int NPages;   /* TO Set The Number Of Pages */
-    int Algorithm;  /* To Chooses memory management algorithm*/
     int NFrames;    /* To Set The Number Of Frames */
+    int Algorithm;  /* To Chooses memory management algorithm*/
+
 
     // Taking The Numbers Of Pages and Frames
     cout << "Enter The Number of Pages :  ";
@@ -30,12 +36,12 @@ int main()
     system("CLS");      /* Clearing the output screen */
 
     // Pages Array
-    int *Pages;
-    Pages = new int [NPages];
+    int *Pages = new int [NPages];
 
     // Pushing Random Numbers into the array from (1) to (10)
     cout << "Array : "<<endl;
     for (int i=0 ; i < NPages ;i++){
+        //cin >> Pages[i];
         Pages[i] = rand() % 10 + 1;
         cout << Pages[i]<<"   ";
     }
@@ -52,7 +58,7 @@ int main()
 
     // Taking an input
     cin >> Algorithm;
-    system("CLS");      /* Clearing the output screen */
+//    system("CLS");      /* Clearing the output screen */
 
     // Checking the input for executing the certain function
     if (Algorithm == 1){
